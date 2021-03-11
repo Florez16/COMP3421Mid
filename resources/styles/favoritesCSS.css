@@ -1,0 +1,87 @@
+/** CSS file for introduction.html **/
+
+/* Import font from google */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+li, a, h1, h2, h3, h4, p {
+    font-family: 'Architects Daughter', cursive;
+}
+
+/** Header part **/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    background-image: url("https://www.solidbackgrounds.com/images/1920x1200/1920x1200-arsenic-solid-color-background.jpg");
+}
+
+.links {
+    display: flex;  /* Align the items in the header horizontally*/
+}
+
+.links li {
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/** End of header part **/
+
+/** Main content part**/
+
+
+.main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+.picture_youtube {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/** End of main content**/
+
+
+
+/** Footer **/
+footer {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-image: url("https://www.solidbackgrounds.com/images/1920x1200/1920x1200-arsenic-solid-color-background.jpg");
+}
+
+footer h3 {
+    text-align: center;
+    color: white;
+}
+
+footer h4 {
+    text-align: center;
+    color: white;
+}
+/** End of footer part**/

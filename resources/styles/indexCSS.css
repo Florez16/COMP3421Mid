@@ -1,0 +1,104 @@
+/** CSS file for index.html **/
+
+/* Import font from google */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+li, a, h1, h2, h3, h4, p {
+    font-family: 'Architects Daughter', cursive;
+}
+
+
+/** Header part **/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    background-image: url("https://www.solidbackgrounds.com/images/1920x1200/1920x1200-arsenic-solid-color-background.jpg");
+}
+
+.links {
+    display: flex;  /* Align the items in the header horizontally*/
+}
+
+.links li {
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/** End of header part **/
+
+
+/** Main content part**/
+.brief {
+    /* Add background image from external website*/
+    background-image: url("resources/images/background.jpg");
+}
+
+.introduction {
+    /* Add background image from external website*/
+    background-image: url("https://www.solidbackgrounds.com/images/1920x1080/1920x1080-bone-solid-color-background.jpg");
+}
+
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+a:hover {
+    color: green;
+}
+
+
+
+/** Social Media part**/
+
+.social_media_links {
+    display: flex;
+    align-items: center;
+    padding-left: 44%;
+}
+
+
+/** End of social media part**/
+
+
+/** Footer **/
+footer {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-image: url("https://www.solidbackgrounds.com/images/1920x1200/1920x1200-arsenic-solid-color-background.jpg");
+}
+
+footer h3 {
+    text-align: center;
+    color: white;
+}
+
+footer h4 {
+    text-align: center;
+    color: white;
+}
+/** End of footer part**/

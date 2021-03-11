@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mini Project | NG NG Kwan Lam</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="resources/styles/mini_projectCSS.css">
+        <!--script src="resources/scripts/mini_projectJS.js"></script-->
+    </head>
+
+    <body>
+        <header>
+            <!-- Header (navigation bar) on the top side of the website -->
+            <a href="index.html"><img src="resources/images/logo.png" width="100" height="100" alt="this was supposed to have a logo here"></a>
+
+            <nav>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li><a href="pictures.html">My Pictures</a></li>
+                    <li><a href="favorites.html">My Favorites</a></li>
+                    <li><a href="mini_project.html">Mini Project</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main">
+            <div class="description">
+                <h2>Super Super Super Mini Project - Human Benchmark Typing Bot</h2>
+                <p>
+                    This is a typing bot of <a href="https://humanbenchmark.com/tests/typing">Human Benchmark - Typing</a>.
+                    The bot was written in Python, and it makes use of the 3 libraries listed below:
+
+                    <ol>
+                        <li><a href="https://selenium-python.readthedocs.io/" title="To open the human benchmark page automatically, and scrape the passage">Selenium</a></li>
+                        <li><a href="https://pyautogui.readthedocs.io/en/latest/" title="To perform clicking the corresponding input box">Pyautogui</a></li>
+                        <li><a href="https://docs.python.org/3/library/time.html" title="To set delay">Time</a></li>
+                    </ol>
+                </p>
+                <br><br>
+            </div>
+
+            <div class="youtube_frame">
+                <h3>Video Demo</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cZ4TNdl2-Z8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br><br><br><br>
+            </div>
+
+            <div class="code">
+                <h3>Source Code</h3>
+                <button type="button" class="collapsible">View / Hide</button>
+
+                <div class="content">
+                    <pre>
+                        from selenium import webdriver
+                        import pyautogui
+                        import time
+
+
+                        def main():
+                            driverPath = "/Users/michaelng/Desktop/1/Code/Python/chromedriver"  # Replace the path of driver on your own computer
+                            driver = webdriver.Chrome(driverPath)
+                            driver.get("https://humanbenchmark.com/tests/typing")
+                            driver.maximize_window()  # Maximize the window
+
+                            characters = driver.find_element_by_class_name("letters")
+                            passage = characters.text
+
+                            pyautogui.click(715, 535)
+                            pyautogui.typewrite(passage)
+
+                            time.sleep(5)
+                            driver.quit()
+
+
+                        main()
+                    </pre>
+                </div>
+            </div>
+
+        </div>
+        
+        <footer>
+            <hr>
+            <h3>@2021 NG NG Kwan Lam 19056505d</h3>
+            <h4>Website built on 22 Jan, 2021.</h4>
+        </footer>
+    </body>
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+</html>
